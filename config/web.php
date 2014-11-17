@@ -31,8 +31,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
-                'username' => 'hmf',
-                'password' => '2507001973',
+                'username' => 'husainov.m@brinex.ru',
+                'password' => 'HuMa250773-brin',
                 'port' => '465',
                 'encryption' => 'ssl',
                 ],
