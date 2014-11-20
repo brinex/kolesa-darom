@@ -5,6 +5,7 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    'language' => 'ru-RU',
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
@@ -51,12 +52,17 @@ $config = [
             'class' => 'yii\authclient\Collection',
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\GoogleOpenId'
+                    'class' => 'yii\authclient\clients\GoogleOpenId',
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
-                    'clientId' => 'facebook_client_id',
-                    'clientSecret' => 'facebook_client_secret',
+                    'clientId' => '1459039357681938',
+                    'clientSecret' => '9eb99520dea4dc08049c94ddf014cfdd',
+                ],
+                'vkontakte' => [
+                    'class' => 'yii\authclient\clients\VKontakte',
+                    'clientId' => '4441364',
+                    'clientSecret' => 'T5yQkhI0zcg1Dn5uamKz',
                 ],
             ],
         ],
@@ -67,8 +73,8 @@ $config = [
             'class' => 'dektrium\user\Module',
             'components' =>[
 
-                'manager' => [
-                   /* 'userClass'    => 'dektrium\user\models\User',
+             /*   'manager' => [
+                    'userClass'    => 'dektrium\user\models\User',
                     'tokenClass'   => 'dektrium\user\models\Token',
                     'profileClass' => 'dektrium\user\models\Profile',
                     'accountClass' => 'dektrium\user\models\Account',
@@ -83,8 +89,8 @@ $config = [
                     // Model that is used on password recovery
                     'passwordRecoveryFormClass' => 'dektrium\user\models\RecoveryForm',
                     // Model that is used on requesting password recovery
-                    'passwordRecoveryRequestFormClass' => 'dektrium\user\models\RecoveryRequestForm',*/
-                ]
+                    'passwordRecoveryRequestFormClass' => 'dektrium\user\models\RecoveryRequestForm',
+                ]*/
             ],
             'enableUnconfirmedLogin'=>true,
             'confirmWithin'=>21600,
